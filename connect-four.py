@@ -19,8 +19,6 @@ def add_piece(board, col, piece):
             break
         elif row == 0:
             print('That column is full!')
-        elif board[row][col] != '.':
-            continue
         elif board[row][col] == piece:
             print('That piece is already there!')
             break
