@@ -25,4 +25,28 @@ def add_piece(board, col, piece):
         else:
             print('Something went wrong!')
 
+def is_game_over():
+    # Check for a winner
+    pass
+    # Check for a tie
+    pass
 
+def connect_four_game():
+    board = [['.' for i in range(7)] for j in range(6)]
+    print('1 2 3 4 5 6 7')
+    for row in range(6):
+        print(' '.join(board[row]))
+    while not is_game_over():
+        input('Player 1, enter a column: ')
+        add_piece(board, col, 'X')
+        print_board()
+        if is_game_over():
+            break
+        input('Player 2, enter a column: ')
+        add_piece(board, col, 'O')
+        print_board()
+        if is_game_over():
+            break
+    print_board()
+    # Print the winner
+    pass
